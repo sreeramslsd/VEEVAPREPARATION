@@ -1,0 +1,1 @@
+select * from Flights where origin = 'Mumbai' or destination = 'Mumbai';
