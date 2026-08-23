@@ -8,3 +8,5 @@ employee_name text,
 department text
 
 );
+
+select * from employee;
