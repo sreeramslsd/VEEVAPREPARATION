@@ -27,7 +27,7 @@ address text
 
 
 
-insert into customer(id, name ,age, address)
+insert into customer
 
 VALUES(1, 'John Smith', 25,  '123 Main St'),
 (2, 'Sarah Johnson', 30,'456 Broadway'),
