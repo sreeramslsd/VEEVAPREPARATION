@@ -2,5 +2,4 @@
 
 
 
-
-select department , avg (Payout) as avg_payout from employee group by department;
+SELECT department, AVG(payout) AS AVG_PAYOUT  FROM EMPLOYEE GROUP BY department;
