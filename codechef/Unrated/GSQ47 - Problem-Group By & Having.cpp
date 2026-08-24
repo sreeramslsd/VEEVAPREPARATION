@@ -3,9 +3,8 @@
 - Where total payout of the department is more than 40. */
  
  
- 
- 
- 
- 
- 
- select department,  avg(payout) as avg_payout from employee group by department  having  sum(payout) > 40 ;
+
+
+
+
+SELECT department, AVG(PAYOUT) AS AVG_PAYOUT FROM EMPLOYEE GROUP BY DEPARTMENT HAVING SUM(PAYOUT) > 40;
