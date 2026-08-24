@@ -4,6 +4,8 @@
 
 
 
-select sum(payout) as product_total_pay from employee where department ='Product';
 
-select avg(payout) as ops_avg_pay from  employee where department ='Operations' ;
+
+SELECT SUM(Payout) AS PRODUCT_TOTAL_PAY FROM EMPLOYEE WHERE department = 'Product';
+
+SELECT AVG(Payout) AS OPS_AVG_PAY FROM EMPLOYEE WHERE department = 'Operations';
