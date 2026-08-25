@@ -1,8 +1,7 @@
-SELECT f_name, f_cost, f_type 
-FROM food 
-WHERE f_id IN ( 
-    SELECT f_id
-    FROM ratings
-    GROUP BY f_id
-    HAVING AVG(f_rating) >= 4
+
+
+select f_name, f_cost, f_type from food where f_id in (
+
+select f_id from ratings group by f_id having  avg(f_rating) >=4
+
 );
