@@ -1,0 +1,8 @@
+/* Write a query to output a table with the list of all items in the supermarket. There already exit a table 'Item' there is another table 'Item_adn' The task is to combine these two tables. */
+
+
+
+
+
+
+select * from item UNION select * from item_adn;
