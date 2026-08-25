@@ -1,0 +1,1 @@
+select customer_name, item_name from customer cross join item;
