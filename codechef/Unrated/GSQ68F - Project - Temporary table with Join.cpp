@@ -1,11 +1,9 @@
-WITH top_purchase AS (  
-    SELECT Purchase_id, Customer_id, Purchase_Amt
-    FROM Purchase
-    ORDER BY Purchase_Amt DESC
-    LIMIT 3
+with Top_purchase as (
+
+select purchase_id, customer_id, purchase_amt from purchase order by purchase_amt desc limit 3 
+
+
 )
-   
-SELECT *
-FROM Customer
-JOIN top_purchase
-ON Customer.Customer_id = top_purchase.Customer_id;
+
+
+select * from customer join Top_Purchase on customer.customer_id = top_purchase.customer_id;
