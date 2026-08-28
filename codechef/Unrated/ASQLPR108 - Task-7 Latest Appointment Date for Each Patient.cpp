@@ -1,5 +1,3 @@
-
-
-
-
-select p.patientid, p.name, a.appointmentdate as LatestAppointment from patients p join appointments a on p.patientid = a.patientid      ; 
+SELECT PatientID, Name, 
+       (SELECT MAX(AppointmentDate) FROM Appointments a WHERE a.PatientID = p.PatientID) AS LatestAppointment 
+FROM Patients p;
