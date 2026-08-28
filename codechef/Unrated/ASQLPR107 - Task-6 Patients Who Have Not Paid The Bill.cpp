@@ -7,6 +7,10 @@
 
 
 
-select p.patientid , p.name from patients p join Billing b on p.patientid = b.patientid where Status = 'Unpaid';
+--select p.patientid , p.name from patients p join Billing b on p.patientid = b.patientid where Status = 'Unpaid';
+
+
+
+select patientid , name from patients where patientid in (select patientid from billing where Status = 'Unpaid' );
 
 
