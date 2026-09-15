@@ -3,4 +3,5 @@
 - Flight destination - Delhi
 */
 
-select * from Flights where gender = 'Female' and destination = 'Delhi';
+
+select * from flights where gender = 'Female' and destination = 'Delhi';
