@@ -3,4 +3,7 @@
 
 
 
-select * from Flights WHERE ORIGIN = 'Mumbai';
+Select *
+    from Flights
+    WHERE Origin = 'Mumbai';
+    
