@@ -5,5 +5,4 @@
 
 
 
-
-select * from Flights where Passenger_id is Null order by Passenger_name;
+select * from flights where Passenger_id is null order by passenger_name;
