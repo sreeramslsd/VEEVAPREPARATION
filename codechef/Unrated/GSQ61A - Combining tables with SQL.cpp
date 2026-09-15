@@ -2,5 +2,4 @@
 
 
 
-
-SELECT * FROM STUDENT S1 JOIN COURSE C1 ON S1.COURSE_ID=C1.COURSE_ID;
+select * from student join course on student.Course_id = course.Course_id;
