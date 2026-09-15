@@ -4,4 +4,5 @@ Write a query to output the order ids which faced this bug. */
 
 
 
-select order_id from Orders where order_time is NULL;
+
+select order_id from orders where order_time is null; 
