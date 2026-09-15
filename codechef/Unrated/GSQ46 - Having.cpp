@@ -4,5 +4,4 @@ The output table should have the name of the department and their respective ave
 
 
 
-
-SELECT department , AVG(Payout) AS AVG_PAYOUT FROM EMPLOYEE GROUP BY DEPARTMENT HAVING COUNT (*) > 3;
+select department, avg(Payout) as avg_payout from employee group by department having count(*) > 3;
