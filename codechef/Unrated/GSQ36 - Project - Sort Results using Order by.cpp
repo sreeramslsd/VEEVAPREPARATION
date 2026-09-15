@@ -4,6 +4,4 @@ Write a query to sort the data in an ascending order. */
 
 
 
-
-
-select * from Orders order by apartment_floor asc;
+select * from orders order by apartment_floor asc;
