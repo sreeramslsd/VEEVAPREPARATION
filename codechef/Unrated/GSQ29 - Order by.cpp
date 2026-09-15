@@ -7,4 +7,4 @@ Entries are ordered by passenger_name in a descending order
 
 
 
-SELECT * FROM Flights where Destination = 'Cairo' order by passenger_name DESC;
+select * from flights where Destination = 'Cairo' order by passenger_name desc;
