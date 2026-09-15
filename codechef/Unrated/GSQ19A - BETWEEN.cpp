@@ -4,6 +4,4 @@
 
 
 
-
-
 select * from flights where passenger_name between 'A' and 'D';
