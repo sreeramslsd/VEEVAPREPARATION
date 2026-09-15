@@ -6,10 +6,9 @@
 Output the counts on separate lines */
 
 
-select count(employee_id) as count_sales from employee where department= 'Sales';
+select count(*) as count_sales from employee where department = 'Sales';
 
-select max(Hourly_Pay) as ops_max_pay from employee where department = 'Operations';
+select max (hourly_pay) as ops_max_pay from employee where department = 'Operations';
 
-select min(Hourly_Pay) as ops_min_pay from employee where department = 'Operations';
- 
+select min(hourly_pay) as ops_min_pay from employee where department = 'Operations';
 
