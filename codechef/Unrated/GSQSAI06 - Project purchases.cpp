@@ -1,1 +1,10 @@
-select strftime('%m',purchase_date ) as purchased_month from purchases where course_name= 'cpp' order by purchased_month limit 1;
+
+
+
+
+
+
+
+
+
+select strftime('%m',Purchase_date ) as purchased_month from purchases where course_name = 'cpp'  order by purchase_date asc limit 1;
