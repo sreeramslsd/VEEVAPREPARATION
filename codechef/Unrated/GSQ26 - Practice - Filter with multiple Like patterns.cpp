@@ -5,5 +5,4 @@
 
 
 
-
-select * from Flights where Destination like '%o' and origin like 'M%';
+select * from flights where Destination like '%o' and Origin like 'M%';
