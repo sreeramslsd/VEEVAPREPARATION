@@ -3,4 +3,4 @@ Restrict your query to return 3 rows. */
 
 
 
-select * from Orders limit 3;
+select * from orders limit 3;
