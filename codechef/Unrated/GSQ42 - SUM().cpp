@@ -3,4 +3,4 @@
 
 
 
-select sum(Payout) as total_payout from employee;
+select sum(Payout) as total_payout from EMPLOYEE;
