@@ -14,3 +14,4 @@ JOIN orders o ON c.customer_id = o.customer_id
 JOIN products p ON o.product_name = p.product_name
 GROUP BY c.customer_name
 ORDER BY total_spent DESC;
+
