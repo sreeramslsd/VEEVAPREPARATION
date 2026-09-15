@@ -1,5 +1,3 @@
 /* Debug the below query */
 
-SELECT  Department, Avg(Age) as 'avg_age'
-FROM employee group by Department
-HAVING Count(Department) > 3;
+select department, avg(age) as avg_age from employee group by department having count(*)>3;
