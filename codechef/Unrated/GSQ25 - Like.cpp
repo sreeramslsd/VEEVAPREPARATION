@@ -4,4 +4,21 @@
 
 
 
-select * from Flights where Passenger_name like '%a';
+select * from flights where Passenger_name like '%a';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
