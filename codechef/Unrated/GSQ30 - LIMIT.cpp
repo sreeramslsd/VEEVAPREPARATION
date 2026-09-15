@@ -5,4 +5,8 @@
 
 
 
-SELECT * FROM Flights order by origin limit 3;
+
+
+
+
+select * from flights order by origin limit 3;
