@@ -4,4 +4,5 @@
 
 
 
-select passenger_name ,  gender from Flights where origin = 'New York' ;
+
+select passenger_name, gender from flights where origin='New York';
