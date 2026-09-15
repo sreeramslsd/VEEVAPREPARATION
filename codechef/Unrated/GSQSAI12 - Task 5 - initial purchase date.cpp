@@ -2,4 +2,7 @@
 
 -- select * from purchases;
 
-SELECT course_name as Course,  strftime('%Y-%m-%d %H:%M:%S', min(purchase_date)) as First_Purchase_Date from Purchases group by course order by First_Purchase_Date asc; 
+
+
+
+select course_name as course , strftime('%Y-%m-%d %H:%M:%S', MIN(purchase_date)) AS First_Purchase_Date FROM PURCHASES GROUP BY course ORDER BY First_Purchase_Date ASC ;
