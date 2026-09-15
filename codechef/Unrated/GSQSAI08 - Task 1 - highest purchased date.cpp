@@ -1,10 +1,1 @@
-SELECT 
-    STRFTIME('%Y-%m-%d', purchase_date) AS Highest_Purchased_Date,
-    COUNT(purchase_id) AS Purchased_Count 
-FROM
-    purchases 
-GROUP BY 
-    Highest_Purchased_Date 
-ORDER BY 
-    Purchased_Count DESC 
-LIMIT 1;
+select strftime('%Y-%m-%d',purchase_date ) as Highest_Purchased_Date, count(purchase_id) as Purchased_Count from purchases group by Highest_Purchased_Date order by Purchased_Count desc limit 1;
