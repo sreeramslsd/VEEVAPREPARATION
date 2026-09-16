@@ -1,26 +1,31 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        // 1. Clean the string: convert to lowercase and remove non-alphanumeric chars
-        String m = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
+        
+        String a = s.replaceAll("[^a-zA-Z0-9]","");
+        a=a.toLowerCase();
 
-        // 2. Set pointers based on the cleaned string's length
-        int l = 0;
-        int r = m.length() - 1;
+        int l=0;
 
-        // 3. Move pointers toward the center
-        while (l < r) {
-            char ch = m.charAt(l);
-            char ch1 = m.charAt(r);
+        int r=a.length()-1;
 
-            // Primitive chars use == or !=
-            if (ch != ch1) {
-                return false;
+        while(l<r)
+        {
+            if(a.charAt(r)!=a.charAt(l))
+            return false;
+
+            if(a.charAt(r)==a.charAt(l))
+            {
+                l++;
+                r--;
             }
-            
-            l++; // Move left pointer right
-            r--; // Move right pointer left
         }
 
-        return true;
+
+return true;
+
+
+
+
+
     }
 }
