@@ -1,1 +1,5 @@
+
+
+
+
 select f_name from food where f_cost < (select avg(f_cost) from food where f_type = 'Continental');
