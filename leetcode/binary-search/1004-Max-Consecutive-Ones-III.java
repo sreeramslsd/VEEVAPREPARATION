@@ -3,29 +3,27 @@ class Solution {
 
         int l = 0;
         int r = 0;
-        int count0 = 0;
+        int count = 0;
+        int length = 0;
         int max = 0;
 
         while (r < nums.length) {
 
-            if (nums[r] == 0) {
-                count0++;
-            }
+            if (nums[r] == 0)
+                count++;
 
-            while (count0 > k) {
+            while (count > k) {
 
-                if (nums[l] == 0) {
-                    count0--;
-                }
+                if (nums[l] == 0)
+                    count--;
 
                 l++;
             }
 
-            int length = r - l + 1;
+            length = r - l + 1;
 
-            if (length > max) {
+            if (length > max)
                 max = length;
-            }
 
             r++;
         }
