@@ -9,25 +9,33 @@ class Solution {
 
         while(temp != null) {
 
-            if(temp.next != null && temp.val == temp.next.val) {
+                if(temp.next != null &&temp.val==temp.next.val)
+                {
+                    int value = temp.val;
 
-                int value = temp.val;
-
-                while(temp != null && temp.val == value) {
-                    temp = temp.next;
-                }
-
-                if(dummy == null)
+                    while(temp != null &&temp.val==value)
+                    {
+                        temp=temp.next;
+                    }
+                    if(dummy == null)
                     head = temp;
                 else
                     dummy.next = temp;
+ 
+                }
 
-            }
-            else {
+                else{
 
-                dummy = temp;
-                temp = temp.next;
-            }
+                    dummy=temp;
+                    temp = temp.next;
+                }
+                 
+
+
+
+
+
+            
         }
 
         return head;
