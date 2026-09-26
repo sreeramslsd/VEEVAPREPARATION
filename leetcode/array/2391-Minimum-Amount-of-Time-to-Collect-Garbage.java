@@ -1,53 +1,55 @@
 class Solution {
     public int garbageCollection(String[] garbage, int[] travel) {
 
-        int paper = 0;
-        int glass = 0;
-        int metal = 0;
+int p=0;
 
-        int lastP = -1;
-        int lastG = -1;
-        int lastM = -1;
+int m=0;
 
-        for(int i=0;i<garbage.length;i++)
-        {
-            for(int j=0;j<garbage[i].length();j++)
-            {
-                if(garbage[i].charAt(j)=='M')
-                {
-                    metal++;
-                    lastM = i;
-                }
-                else if(garbage[i].charAt(j)=='P')
-                {
-                    paper++;
-                    lastP = i;
-                }
-                else if(garbage[i].charAt(j)=='G')
-                {
-                    glass++;
-                    lastG = i;
-                }
-            }
-        }
+int g=0;
+int lm=0;
+int lp=0;
+int lg=0;
 
-        int time = paper + glass + metal;
+for(int i=0;i<garbage.length;i++)
+{
 
-        int travelP = 0;
-        int travelG = 0;
-        int travelM = 0;
+for(int j=0;j<garbage[i].length();j++)
+{
 
-        for(int i=0;i<lastP;i++)
-            travelP += travel[i];
+if(garbage[i].charAt(j)=='M'){
+m++;
+lm=i;}
+else if(garbage[i].charAt(j)=='P'){
+p++;
+lp=i;
+}
 
-        for(int i=0;i<lastG;i++)
-            travelG += travel[i];
+else if(garbage[i].charAt(j)=='G'){
+g++;
+lg=i;
 
-        for(int i=0;i<lastM;i++)
-            travelM += travel[i];
+}
 
-        time = time + travelP + travelG + travelM;
+}
 
-        return time;
+
+}
+int tp=0;
+int tg=0;
+
+int tm=0;
+
+int time = m+p+g;
+for(int i=0;i<lm;i++)
+tm=tm+travel[i];
+for(int i=0;i<lp;i++)
+tp=tp+travel[i];
+for(int i=0;i<lg;i++)
+tg=tg+travel[i];
+
+int tt = tp+tm+tg;
+
+return tt+time;
+        
     }
 }
