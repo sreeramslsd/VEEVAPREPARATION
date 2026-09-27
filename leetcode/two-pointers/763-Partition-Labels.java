@@ -17,7 +17,10 @@ class Solution {
 
         for (int i = 0; i < s.length(); i++) {
 
-            end = Math.max(end, last[s.charAt(i) - 'a']);
+            int lastIndex = last[s.charAt(i) - 'a'];
+
+            if (lastIndex > end)
+                end = lastIndex;
 
             if (i == end) {
                 answer.add(end - start + 1);
