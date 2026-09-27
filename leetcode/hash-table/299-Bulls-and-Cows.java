@@ -2,8 +2,9 @@ class Solution {
     public String getHint(String secret, String guess) {
 
         int bulls = 0;
+        int cows = 0;
 
-        HashMap<Character, Integer> hm = new HashMap<>();
+        int[] count = new int[10];
 
         for(int i=0;i<secret.length();i++)
         {
@@ -13,28 +14,20 @@ class Solution {
             }
             else
             {
-                hm.put(secret.charAt(i), hm.getOrDefault(secret.charAt(i),0)+1);
+                count[secret.charAt(i)-'0']++;
             }
         }
-
-        int cows = 0;
 
         for(int i=0;i<guess.length();i++)
         {
             if(secret.charAt(i)!=guess.charAt(i))
             {
-                char ch = guess.charAt(i);
+                int digit = guess.charAt(i)-'0';
 
-                if(hm.containsKey(ch))
+                if(count[digit]>0)
                 {
                     cows++;
-
-                    hm.put(ch, hm.get(ch)-1);
-
-                    if(hm.get(ch)==0)
-                    {
-                        hm.remove(ch);
-                    }
+                    count[digit]--;
                 }
             }
         }
